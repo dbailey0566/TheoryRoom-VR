@@ -87,7 +87,7 @@
            position="-4 2.6 -5.8"
            width="3.2"
            height="1.2"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-info="Perceived Ease of Use: Belief that a system is free of effort. Influences usefulness and behavioral intention.">
   </a-plane>
   
@@ -103,7 +103,7 @@
            position="4 2.6 -5.8"
            width="3.2"
            height="1.2"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-info="Perceived Usefulness: Belief that using a system improves performance. Direct predictor of behavioral intention.">
   </a-plane>
   
@@ -121,7 +121,7 @@
            position="0 1.4 -5.8"
            width="3.4"
            height="1.2"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-info="Behavioral Intention: Intention to use the system. Predicted by perceived usefulness and ease of use.">
   </a-plane>
   
@@ -139,7 +139,7 @@
            position="0 0.2 -5.8"
            width="3.4"
            height="1.2"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-info="Actual Use: Observable system usage behavior following intention.">
   </a-plane>
   
@@ -152,17 +152,29 @@
   
   <!-- ================= ARROWS ================= -->
   
-  <!-- Ease → Usefulness -->
+
+
+  <!-- Ease → Usefulness (Horizontal) -->
   <a-box class="construct"
          position="0 2.9 -5.75"
          width="5"
          height="0.06"
          depth="0.02"
          color="#000"
-         data-info="Ease of Use influences Usefulness. When systems are easier to use, they are more likely to be perceived as useful.">
+         data-info="Ease of Use influences Usefulness.">
   </a-box>
   
-  <!-- Ease → Intention -->
+  <!-- Arrowhead -->
+  <a-cone position="2.55 2.9 -5.75"
+          radius-bottom="0.12"
+          height="0.25"
+          rotation="0 0 -90"
+          color="#000">
+  </a-cone>
+  
+  
+  
+  <!-- Ease → Behavioral Intention (Left Diagonal) -->
   <a-box class="construct"
          position="-2 2 -5.75"
          width="2.5"
@@ -170,10 +182,19 @@
          depth="0.02"
          rotation="0 0 -28"
          color="#000"
-         data-info="Ease of Use can directly influence Behavioral Intention.">
+         data-info="Ease of Use directly influences Behavioral Intention.">
   </a-box>
   
-  <!-- Usefulness → Intention -->
+  <a-cone position="-0.9 1.55 -5.75"
+          radius-bottom="0.12"
+          height="0.25"
+          rotation="0 0 -118"
+          color="#000">
+  </a-cone>
+  
+  
+  
+  <!-- Usefulness → Behavioral Intention (Right Diagonal) -->
   <a-box class="construct"
          position="2 2 -5.75"
          width="2.5"
@@ -184,15 +205,31 @@
          data-info="Usefulness strongly predicts Behavioral Intention.">
   </a-box>
   
-  <!-- Intention → Actual Use -->
+  <a-cone position="0.9 1.55 -5.75"
+          radius-bottom="0.12"
+          height="0.25"
+          rotation="0 0 118"
+          color="#000">
+  </a-cone>
+  
+  
+  
+  <!-- Intention → Actual Use (Vertical) -->
   <a-box class="construct"
          position="0 0.8 -5.75"
          width="0.06"
          height="1"
          depth="0.02"
          color="#000"
-         data-info="Behavioral Intention predicts Actual Use. Intention precedes observable behavior in TAM.">
+         data-info="Behavioral Intention predicts Actual Use.">
   </a-box>
+  
+  <a-cone position="0 0.25 -5.75"
+          radius-bottom="0.12"
+          height="0.25"
+          rotation="90 0 0"
+          color="#000">
+  </a-cone>
 
 
 
@@ -218,7 +255,7 @@
            rotation="0 90 0"
            width="3"
            height="1"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-info="Mastery Experience: Past success strengthens belief in capability.">
   </a-plane>
 
@@ -268,7 +305,7 @@
            rotation="0 180 0"
            width="3"
            height="1"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-correct="true">
   </a-plane>
 
@@ -285,7 +322,7 @@
            rotation="0 180 0"
            width="3"
            height="1"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-correct="false">
   </a-plane>
 
@@ -302,7 +339,7 @@
            rotation="0 180 0"
            width="3"
            height="1"
-           color="#DDDDDD"
+           color="#B0BEC5"
            data-correct="false">
   </a-plane>
 
