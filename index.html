@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Theoretical Framework VR Room</title>
-
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-<a-scene cursor="rayOrigin: mouse">
+<a-scene>
 
   <!-- Camera + UI Panels -->
   <a-entity position="0 1.6 0">
-    <a-camera wasd-controls-enabled="false">
-
+    <a-camera wasd-controls-enabled="false"
+              cursor="rayOrigin: mouse"
+              raycaster="objects: .construct, .answer">
 
       <!-- Info Panel -->
       <a-plane id="infoPanel"
@@ -78,17 +78,16 @@
           width="6">
   </a-text>
 
-  <!-- TAM Construct 1 -->
+  <!-- ===== TAM MODEL ===== -->
+
+  <!-- Top Row -->
   <a-plane class="construct"
            position="-2 2 -5.8"
            width="3"
            height="1"
            color="#DDDDDD"
-           data-info="Perceived Usefulness: The degree to which a person believes a system enhances performance. Measured with Likert scale survey items in TAM studies.">
+           data-info="Perceived Usefulness: Belief that using a system improves performance. Direct predictor of behavioral intention.">
   </a-plane>
-
-
-
 
   <a-text value="Perceived Usefulness"
           position="-2 2 -5.7"
@@ -96,46 +95,22 @@
           color="#000"
           width="4">
   </a-text>
-  <a-text value="↓"
-          position="-2 1.6 -5.7"
-          align="center"
-          color="#000"
-          width="2">
-  </a-text>
-  <!-- TAM Construct 2 -->
-<!-- TAM Construct 3 -->
-<!-- TAM Construct 1: Perceived Usefulness -->
-  <a-plane class="construct"
-           position="-2 2 -5.8"
-           width="3"
-           height="1"
-           color="#DDDDDD"
-           data-info="Perceived Usefulness: The degree to which a person believes a system enhances performance. Measured with Likert scale survey items in TAM studies.">
-  </a-plane>
-  
-  <a-text value="Perceived Usefulness"
-          position="-2 2 -5.7"
-          align="center"
-          color="#000"
-          width="4">
-  </a-text>
-  
-  <!-- TAM Construct 2: Perceived Ease of Use -->
+
   <a-plane class="construct"
            position="2 2 -5.8"
            width="3"
            height="1"
            color="#DDDDDD"
-           data-info="Perceived Ease of Use: The degree to which a person believes a system is free of effort. Strong predictor in TAM research.">
+           data-info="Perceived Ease of Use: Belief that a system is free of effort. Influences usefulness and intention.">
   </a-plane>
-  
+
   <a-text value="Perceived Ease of Use"
           position="2 2 -5.7"
           align="center"
           color="#000"
           width="4">
   </a-text>
-  
+
   <!-- Down Arrows -->
   <a-text value="↓"
           position="-2 1.6 -5.7"
@@ -143,31 +118,30 @@
           color="#000"
           width="2">
   </a-text>
-  
+
   <a-text value="↓"
           position="2 1.6 -5.7"
           align="center"
           color="#000"
           width="2">
   </a-text>
-  
-  <!-- TAM Construct 3: Behavioral Intention -->
+
+  <!-- Bottom Row -->
   <a-plane class="construct"
            position="-2 1 -5.8"
            width="3"
            height="1"
            color="#DDDDDD"
-           data-info="Behavioral Intention: The intention to use a system, typically predicted by perceived usefulness and ease of use.">
+           data-info="Behavioral Intention: Intention to use the system. Predicted by usefulness and ease of use.">
   </a-plane>
-  
+
   <a-text value="Behavioral Intention"
           position="-2 1 -5.7"
           align="center"
           color="#000"
           width="4">
   </a-text>
-  
-  <!-- TAM Construct 4: Actual Use -->
+
   <a-plane class="construct"
            position="2 1 -5.8"
            width="3"
@@ -175,14 +149,14 @@
            color="#DDDDDD"
            data-info="Actual Use: Observable system usage behavior following intention.">
   </a-plane>
-  
+
   <a-text value="Actual Use"
           position="2 1 -5.7"
           align="center"
           color="#000"
           width="4">
   </a-text>
-  
+
   <!-- Horizontal Arrow -->
   <a-text value="→"
           position="0 1 -5.7"
@@ -191,9 +165,8 @@
           width="2">
   </a-text>
 
+  <!-- ===== SELF-EFFICACY WALL ===== -->
 
-
-  <!-- Left Wall -->
   <a-plane position="-6 2 0"
            rotation="0 90 0"
            width="12"
@@ -201,7 +174,6 @@
            color="#F5F5F5">
   </a-plane>
 
-  <!-- Self-Efficacy Title -->
   <a-text value="Self-Efficacy Theory"
           position="-5.9 3.5 0"
           rotation="0 90 0"
@@ -216,7 +188,7 @@
            width="3"
            height="1"
            color="#DDDDDD"
-           data-info="Mastery Experience: Past success builds belief in capability.">
+           data-info="Mastery Experience: Past success strengthens belief in capability.">
   </a-plane>
 
   <a-text value="Mastery Experience"
@@ -227,15 +199,8 @@
           width="4">
   </a-text>
 
-  <!-- Right Wall -->
-  <a-plane position="6 2 0"
-           rotation="0 -90 0"
-           width="12"
-           height="4"
-           color="#F5F5F5">
-  </a-plane>
+  <!-- ===== FRONT WALL CHALLENGE ===== -->
 
-  <!-- Front Wall -->
   <a-plane position="0 2 6"
            rotation="0 180 0"
            width="12"
@@ -243,21 +208,6 @@
            color="#FFFFFF">
   </a-plane>
 
-  <!-- Orientation Panel -->
-  <a-plane position="0 2 1.5"
-           width="4"
-           height="1.5"
-           color="#FFFFFF">
-  </a-plane>
-
-  <a-text value="Explore each wall. Click constructs. Then complete the alignment challenge."
-          position="0 2 1.6"
-          align="center"
-          color="#000"
-          width="3.5">
-  </a-text>
-
-  <!-- Alignment Challenge Title -->
   <a-text value="Alignment Challenge"
           position="0 3.5 5.9"
           rotation="0 180 0"
@@ -266,7 +216,6 @@
           width="6">
   </a-text>
 
-  <!-- Purpose -->
   <a-plane position="0 2.8 5.8"
            rotation="0 180 0"
            width="8"
