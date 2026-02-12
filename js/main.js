@@ -1,33 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // ===== CONSTRUCT INFO LOGIC =====
+// ===== CONSTRUCT INFO LOGIC =====
   const constructs = document.querySelectorAll(".construct");
   const infoPanel = document.querySelector("#infoPanel");
   const infoText = document.querySelector("#infoText");
-
+  
   constructs.forEach(function (construct) {
-
+  
     construct.addEventListener("click", function () {
-
+  
       const info = construct.getAttribute("data-info");
-      const current = infoText.getAttribute("value");
-
-      if (infoPanel.getAttribute("visible") && current === info) {
-
-        infoPanel.setAttribute("visible", false);
-        infoText.setAttribute("visible", false);
-
-      } else {
-
-        infoPanel.setAttribute("visible", true);
-        infoText.setAttribute("value", info);
-        infoText.setAttribute("visible", true);
-
-      }
-
+  
+      // Reset all construct colors
+      constructs.forEach(c => c.setAttribute("color", "#B0BEC5"));
+  
+      // Highlight clicked construct
+      construct.setAttribute("color", "#4CAF50");
+  
+      // Show info
+      infoPanel.setAttribute("visible", true);
+      infoText.setAttribute("value", info);
+      infoText.setAttribute("visible", true);
+  
     });
-
+  
   });
+
 
 
   // ===== ALIGNMENT CHALLENGE LOGIC =====
