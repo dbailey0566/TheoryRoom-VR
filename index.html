@@ -79,96 +79,121 @@
   </a-text>
 
   <!-- ===== TAM MODEL ===== -->
+<!-- ===== TAM MODEL ===== -->
 
-  <!-- Top Row -->
+<!-- TAM Title -->
+  <a-text value="Technology Acceptance Model"
+          position="0 3.5 -5.9"
+          align="center"
+          color="#000"
+          width="6">
+  </a-text>
+
+<!-- Top Row -->
+
+<!-- Perceived Ease of Use -->
   <a-plane class="construct"
-           position="-2 2 -5.8"
+           position="-3 2 -5.8"
+           width="3"
+           height="1"
+           color="#DDDDDD"
+           data-info="Perceived Ease of Use: Belief that a system is free of effort. Influences usefulness and behavioral intention.">
+  </a-plane>
+  
+  <a-text value="Perceived Ease of Use"
+          position="-3 2 -5.7"
+          align="center"
+          color="#000"
+          width="4">
+  </a-text>
+  
+  <!-- Perceived Usefulness -->
+  <a-plane class="construct"
+           position="3 2 -5.8"
            width="3"
            height="1"
            color="#DDDDDD"
            data-info="Perceived Usefulness: Belief that using a system improves performance. Direct predictor of behavioral intention.">
   </a-plane>
-
-  <a-text value="Perceived Usefulness"
-          position="-2 2 -5.7"
-          align="center"
-          color="#000"
-          width="4">
-  </a-text>
-
-  <a-plane class="construct"
-           position="2 2 -5.8"
-           width="3"
-           height="1"
-           color="#DDDDDD"
-           data-info="Perceived Ease of Use: Belief that a system is free of effort. Influences usefulness and intention.">
-  </a-plane>
-
-  <a-text value="Perceived Ease of Use"
-          position="2 2 -5.7"
-          align="center"
-          color="#000"
-          width="4">
-  </a-text>
-
-  <!-- Down Arrows -->
-<!-- Vertical Line from Usefulness -->
-  <a-box position="-2 1.6 -5.75"
-         width="0.08"
-         height="0.5"
-         depth="0.02"
-         color="#000000">
-  </a-box>
   
-  <!-- Vertical Line from Ease of Use -->
-  <a-box position="2 1.6 -5.75"
-         width="0.08"
-         height="0.5"
-         depth="0.02"
-         color="#000000">
-  </a-box>
-
-
-  <!-- Bottom Row -->
-  <a-plane class="construct"
-           position="-2 1 -5.8"
-           width="3"
-           height="1"
-           color="#DDDDDD"
-           data-info="Behavioral Intention: Intention to use the system. Predicted by usefulness and ease of use.">
-  </a-plane>
-
-  <a-text value="Behavioral Intention"
-          position="-2 1 -5.7"
+  <a-text value="Perceived Usefulness"
+          position="3 2 -5.7"
           align="center"
           color="#000"
           width="4">
   </a-text>
-
+  
+  <!-- Middle Row -->
+  
+  <!-- Behavioral Intention -->
   <a-plane class="construct"
-           position="2 1 -5.8"
+           position="0 1.2 -5.8"
+           width="3"
+           height="1"
+           color="#DDDDDD"
+           data-info="Behavioral Intention: Intention to use the system. Predicted by perceived usefulness and ease of use.">
+  </a-plane>
+  
+  <a-text value="Behavioral Intention"
+          position="0 1.2 -5.7"
+          align="center"
+          color="#000"
+          width="4">
+  </a-text>
+  
+  <!-- Bottom Row -->
+  
+  <!-- Actual Use -->
+  <a-plane class="construct"
+           position="0 0.4 -5.8"
            width="3"
            height="1"
            color="#DDDDDD"
            data-info="Actual Use: Observable system usage behavior following intention.">
   </a-plane>
-
+  
   <a-text value="Actual Use"
-          position="2 1 -5.7"
+          position="0 0.4 -5.7"
           align="center"
           color="#000"
           width="4">
   </a-text>
-
-  <!-- Horizontal Arrow -->
-<!-- Horizontal Line from Intention to Use -->
-  <a-box position="0 1 -5.75"
-         width="0.9"
+  
+  <!-- ===== ARROWS (Thin Lines) ===== -->
+  
+  <!-- Ease → Usefulness -->
+  <a-box position="0 2 -5.75"
+         width="3"
          height="0.08"
          depth="0.02"
          color="#000000">
   </a-box>
-
+  
+  <!-- Ease → Intention -->
+  <a-box position="-1.5 1.6 -5.75"
+         width="2"
+         height="0.08"
+         depth="0.02"
+         rotation="0 0 -30"
+         color="#000000">
+  </a-box>
+  
+  <!-- Usefulness → Intention -->
+  <a-box position="1.5 1.6 -5.75"
+         width="2"
+         height="0.08"
+         depth="0.02"
+         rotation="0 0 30"
+         color="#000000">
+  </a-box>
+  
+  <!-- Intention → Actual Use -->
+  <a-box position="0 0.8 -5.75"
+         width="0.08"
+         height="0.8"
+         depth="0.02"
+         color="#000000">
+  </a-box>
 
   <!-- ===== SELF-EFFICACY WALL ===== -->
 
