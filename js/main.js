@@ -1,30 +1,20 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
-  const construct = document.querySelector("#construct1");
+  const constructs = document.querySelectorAll(".construct");
   const panel = document.querySelector("#infoPanel");
   const text = document.querySelector("#infoText");
 
-  construct.addEventListener("click", function () {
+  constructs.forEach(function (construct) {
 
-    const isVisible = panel.getAttribute("visible");
+    construct.addEventListener("click", function () {
 
-    if (!isVisible) {
+      const info = construct.getAttribute("data-info");
 
       panel.setAttribute("visible", true);
-      text.setAttribute("value",
-        "Perceived Usefulness:\n\n" +
-        "The degree to which a person believes that using a system enhances performance.\n\n" +
-        "Often measured with Likert scale survey items in TAM studies."
-      );
+      text.setAttribute("value", info);
       text.setAttribute("visible", true);
 
-    } else {
-
-      panel.setAttribute("visible", false);
-      text.setAttribute("visible", false);
-
-    }
+    });
 
   });
 
