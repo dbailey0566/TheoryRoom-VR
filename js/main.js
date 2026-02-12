@@ -9,10 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
     construct.addEventListener("click", function () {
 
       const info = construct.getAttribute("data-info");
+      const current = text.getAttribute("value");
 
-      panel.setAttribute("visible", true);
-      text.setAttribute("value", info);
-      text.setAttribute("visible", true);
+      if (panel.getAttribute("visible") && current === info) {
+
+        panel.setAttribute("visible", false);
+        text.setAttribute("visible", false);
+
+      } else {
+
+        panel.setAttribute("visible", true);
+        text.setAttribute("value", info);
+        text.setAttribute("visible", true);
+
+      }
 
     });
 
