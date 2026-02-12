@@ -73,22 +73,29 @@
   </a-text>
 
   <!-- Shared Info Panel -->
-  <a-plane id="infoPanel"
-           position="0 1.2 -4"
-           width="6"
-           height="2.5"
-           color="#FFFFFF"
-           visible="false">
-  </a-plane>
+  <a-entity position="0 1.6 0">
+    <a-camera>
+  
+      <a-plane id="infoPanel"
+               position="0 -0.3 -1.5"
+               width="1.8"
+               height="0.9"
+               color="#FFFFFF"
+               visible="false">
+      </a-plane>
+  
+      <a-text id="infoText"
+              value=""
+              position="0 -0.3 -1.49"
+              align="center"
+              color="#000"
+              width="1.6"
+              visible="false">
+      </a-text>
+  
+    </a-camera>
+  </a-entity>
 
-  <a-text id="infoText"
-          value=""
-          position="0 1.2 -3.9"
-          align="center"
-          color="#000"
-          width="5"
-          visible="false">
-  </a-text>
 <!-- Left Wall -->
   <a-plane position="-6 2 0"
            rotation="0 90 0"
