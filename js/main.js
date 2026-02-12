@@ -1,27 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Construct Info Logic
+  // ===== CONSTRUCT INFO LOGIC =====
   const constructs = document.querySelectorAll(".construct");
-  const panel = document.querySelector("#infoPanel");
-  const text = document.querySelector("#infoText");
+  const infoPanel = document.querySelector("#infoPanel");
+  const infoText = document.querySelector("#infoText");
 
   constructs.forEach(function (construct) {
 
     construct.addEventListener("click", function () {
 
       const info = construct.getAttribute("data-info");
-      const current = text.getAttribute("value");
+      const current = infoText.getAttribute("value");
 
-      if (panel.getAttribute("visible") && current === info) {
+      if (infoPanel.getAttribute("visible") && current === info) {
 
-        panel.setAttribute("visible", false);
-        text.setAttribute("visible", false);
+        infoPanel.setAttribute("visible", false);
+        infoText.setAttribute("visible", false);
 
       } else {
 
-        panel.setAttribute("visible", true);
-        text.setAttribute("value", info);
-        text.setAttribute("visible", true);
+        infoPanel.setAttribute("visible", true);
+        infoText.setAttribute("value", info);
+        infoText.setAttribute("visible", true);
 
       }
 
@@ -29,8 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-  // Alignment Challenge Logic
+
+  // ===== ALIGNMENT CHALLENGE LOGIC =====
   const answers = document.querySelectorAll(".answer");
+  const feedbackPanel = document.querySelector("#feedbackPanel");
+  const feedbackText = document.querySelector("#feedbackText");
 
   answers.forEach(function (answer) {
 
@@ -38,12 +41,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const correct = answer.getAttribute("data-correct");
 
+      // Reset all answer colors
       answers.forEach(a => a.setAttribute("color", "#DDDDDD"));
 
       if (correct === "true") {
+
         answer.setAttribute("color", "#8BC34A");
+
+        feedbackPanel.setAttribute("visible", true);
+        feedbackText.setAttribute("visible", true);
+        feedbackText.setAttribute("value",
+          "Correct. TAM directly models perceived usefulness and ease of use predicting behavioral intention."
+        );
+
       } else {
+
         answer.setAttribute("color", "#F44336");
+
+        feedbackPanel.setAttribute("visible", true);
+        feedbackText.setAttribute("visible", true);
+        feedbackText.setAttribute("value",
+          "Not quite. This purpose focuses on usefulness and ease of use predicting intention. That aligns with TAM."
+        );
+
       }
 
     });
