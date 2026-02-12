@@ -70,127 +70,130 @@
            color="#FFFFFF">
   </a-plane>
 
-  <!-- TAM Title -->
+<!-- ================= TAM MODEL (SPREAD OUT CLEAN LAYOUT) ================= -->
+
+  <!-- Title -->
   <a-text value="Technology Acceptance Model"
-          position="0 3.5 -5.9"
+          position="0 3.8 -5.9"
           align="center"
           color="#000"
-          width="6">
+          width="7">
   </a-text>
-
-<!-- Top Row -->
-
-<!-- Perceived Ease of Use -->
+  
+  <!-- ===== TOP ROW ===== -->
+  
+  <!-- Perceived Ease of Use -->
   <a-plane class="construct"
-           position="-3 2 -5.8"
-           width="3"
-           height="1"
+           position="-4 2.6 -5.8"
+           width="3.2"
+           height="1.2"
            color="#DDDDDD"
            data-info="Perceived Ease of Use: Belief that a system is free of effort. Influences usefulness and behavioral intention.">
   </a-plane>
   
   <a-text value="Perceived Ease of Use"
-          position="-3 2 -5.7"
+          position="-4 2.6 -5.7"
           align="center"
           color="#000"
-          width="4">
+          width="4.5">
   </a-text>
   
   <!-- Perceived Usefulness -->
   <a-plane class="construct"
-           position="3 2 -5.8"
-           width="3"
-           height="1"
+           position="4 2.6 -5.8"
+           width="3.2"
+           height="1.2"
            color="#DDDDDD"
            data-info="Perceived Usefulness: Belief that using a system improves performance. Direct predictor of behavioral intention.">
   </a-plane>
   
   <a-text value="Perceived Usefulness"
-          position="3 2 -5.7"
+          position="4 2.6 -5.7"
           align="center"
           color="#000"
-          width="4">
+          width="4.5">
   </a-text>
   
-  <!-- Middle Row -->
+  <!-- ===== MIDDLE ROW ===== -->
   
   <!-- Behavioral Intention -->
   <a-plane class="construct"
-           position="0 1.2 -5.8"
-           width="3"
-           height="1"
+           position="0 1.4 -5.8"
+           width="3.4"
+           height="1.2"
            color="#DDDDDD"
            data-info="Behavioral Intention: Intention to use the system. Predicted by perceived usefulness and ease of use.">
   </a-plane>
   
   <a-text value="Behavioral Intention"
-          position="0 1.2 -5.7"
+          position="0 1.4 -5.7"
           align="center"
           color="#000"
-          width="4">
+          width="4.5">
   </a-text>
   
-  <!-- Bottom Row -->
+  <!-- ===== BOTTOM ROW ===== -->
   
   <!-- Actual Use -->
   <a-plane class="construct"
-           position="0 0.4 -5.8"
-           width="3"
-           height="1"
+           position="0 0.2 -5.8"
+           width="3.4"
+           height="1.2"
            color="#DDDDDD"
            data-info="Actual Use: Observable system usage behavior following intention.">
   </a-plane>
   
   <a-text value="Actual Use"
-          position="0 0.4 -5.7"
+          position="0 0.2 -5.7"
           align="center"
           color="#000"
-          width="4">
+          width="4.5">
   </a-text>
   
-  <!-- ===== ARROWS (Thin Lines) ===== -->
+  <!-- ================= ARROWS ================= -->
   
-<!-- Ease of Use → Usefulness -->
+  <!-- Ease → Usefulness -->
   <a-box class="construct"
-         position="0 2.25 -5.75"
-         width="3"
-         height="0.05"
+         position="0 2.9 -5.75"
+         width="5"
+         height="0.06"
          depth="0.02"
-         color="#000000"
-         data-info="Perceived Ease of Use influences Perceived Usefulness. Systems that are easier to use are more likely to be viewed as useful because they reduce cognitive effort.">
+         color="#000"
+         data-info="Ease of Use influences Usefulness. When systems are easier to use, they are more likely to be perceived as useful.">
   </a-box>
   
-  <!-- Ease of Use → Behavioral Intention -->
+  <!-- Ease → Intention -->
   <a-box class="construct"
-         position="-1.2 1.75 -5.75"
-         width="1.6"
-         height="0.05"
+         position="-2 2 -5.75"
+         width="2.5"
+         height="0.06"
          depth="0.02"
          rotation="0 0 -28"
-         color="#000000"
-         data-info="Perceived Ease of Use can directly influence Behavioral Intention. When a system feels effortless, users are more willing to adopt it.">
+         color="#000"
+         data-info="Ease of Use can directly influence Behavioral Intention.">
   </a-box>
   
-  <!-- Usefulness → Behavioral Intention -->
+  <!-- Usefulness → Intention -->
   <a-box class="construct"
-         position="1.2 1.75 -5.75"
-         width="1.6"
-         height="0.05"
+         position="2 2 -5.75"
+         width="2.5"
+         height="0.06"
          depth="0.02"
          rotation="0 0 28"
-         color="#000000"
-         data-info="Perceived Usefulness is typically the strongest predictor of Behavioral Intention. If users believe a system improves performance, they intend to use it.">
+         color="#000"
+         data-info="Usefulness strongly predicts Behavioral Intention.">
   </a-box>
   
-  <!-- Behavioral Intention → Actual Use -->
+  <!-- Intention → Actual Use -->
   <a-box class="construct"
-         position="0 0.85 -5.75"
-         width="0.05"
-         height="0.7"
+         position="0 0.8 -5.75"
+         width="0.06"
+         height="1"
          depth="0.02"
-         color="#000000"
-         data-info="Behavioral Intention predicts Actual Use. In TAM, intention is treated as the immediate determinant of observable behavior.">
+         color="#000"
+         data-info="Behavioral Intention predicts Actual Use. Intention precedes observable behavior in TAM.">
   </a-box>
+
 
 
   <!-- ===== SELF-EFFICACY WALL ===== -->
