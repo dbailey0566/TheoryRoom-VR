@@ -12,11 +12,48 @@
 
 <a-scene cursor="rayOrigin: mouse">
 
-  <!-- Camera -->
+  <!-- Camera + UI Panels -->
   <a-entity position="0 1.6 0">
-    <a-camera></a-camera>
-  </a-entity>
+    <a-camera>
 
+      <!-- Info Panel -->
+      <a-plane id="infoPanel"
+               position="0 -0.3 -1.5"
+               width="1.8"
+               height="0.9"
+               color="#FFFFFF"
+               visible="false">
+      </a-plane>
+
+      <a-text id="infoText"
+              value=""
+              position="0 -0.3 -1.49"
+              align="center"
+              color="#000"
+              width="1.6"
+              visible="false">
+      </a-text>
+
+      <!-- Feedback Panel -->
+      <a-plane id="feedbackPanel"
+               position="0 -1.2 -1.5"
+               width="1.8"
+               height="0.6"
+               color="#FFFFFF"
+               visible="false">
+      </a-plane>
+
+      <a-text id="feedbackText"
+              value=""
+              position="0 -1.2 -1.49"
+              align="center"
+              color="#000"
+              width="1.6"
+              visible="false">
+      </a-text>
+
+    </a-camera>
+  </a-entity>
 
   <!-- Floor -->
   <a-plane rotation="-90 0 0"
@@ -32,7 +69,7 @@
            color="#FFFFFF">
   </a-plane>
 
-  <!-- Wall Title -->
+  <!-- TAM Title -->
   <a-text value="Technology Acceptance Model"
           position="0 3.5 -5.9"
           align="center"
@@ -40,7 +77,7 @@
           width="6">
   </a-text>
 
-  <!-- Construct 1 -->
+  <!-- TAM Construct 1 -->
   <a-plane class="construct"
            position="-2 2 -5.8"
            width="3"
@@ -56,7 +93,7 @@
           width="4">
   </a-text>
 
-  <!-- Construct 2 -->
+  <!-- TAM Construct 2 -->
   <a-plane class="construct"
            position="2 2 -5.8"
            width="3"
@@ -72,55 +109,15 @@
           width="4">
   </a-text>
 
-  <!-- Shared Info Panel -->
-  <a-entity position="0 1.6 0">
-    <a-camera>
-  
-      <a-plane id="infoPanel"
-               position="0 -0.3 -1.5"
-               width="1.8"
-               height="0.9"
-               color="#FFFFFF"
-               visible="false">
-      </a-plane>
-  
-      <a-text id="infoText"
-              value=""
-              position="0 -0.3 -1.49"
-              align="center"
-              color="#000"
-              width="1.6"
-              visible="false">
-      </a-text>
-  
-    </a-camera>
-  </a-entity>
-
-<!-- Left Wall -->
+  <!-- Left Wall -->
   <a-plane position="-6 2 0"
            rotation="0 90 0"
            width="12"
            height="4"
            color="#F5F5F5">
   </a-plane>
-  
-  <!-- Right Wall -->
-  <a-plane position="6 2 0"
-           rotation="0 -90 0"
-           width="12"
-           height="4"
-           color="#F5F5F5">
-  </a-plane>
-  
-  <!-- Front Wall -->
-  <a-plane position="0 2 6"
-           rotation="0 180 0"
-           width="12"
-           height="4"
-           color="#FFFFFF">
-  </a-plane>
 
-  <!-- Framework 2 Title -->
+  <!-- Self-Efficacy Title -->
   <a-text value="Self-Efficacy Theory"
           position="-5.9 3.5 0"
           rotation="0 90 0"
@@ -128,7 +125,7 @@
           color="#000"
           width="6">
   </a-text>
-  
+
   <a-plane class="construct"
            position="-5.8 2 -2"
            rotation="0 90 0"
@@ -137,7 +134,7 @@
            color="#DDDDDD"
            data-info="Mastery Experience: Past success builds belief in capability.">
   </a-plane>
-  
+
   <a-text value="Mastery Experience"
           position="-5.7 2 -2"
           rotation="0 90 0"
@@ -146,99 +143,113 @@
           width="4">
   </a-text>
 
+  <!-- Right Wall -->
+  <a-plane position="6 2 0"
+           rotation="0 -90 0"
+           width="12"
+           height="4"
+           color="#F5F5F5">
+  </a-plane>
+
+  <!-- Front Wall -->
+  <a-plane position="0 2 6"
+           rotation="0 180 0"
+           width="12"
+           height="4"
+           color="#FFFFFF">
+  </a-plane>
+
+  <!-- Orientation Panel -->
   <a-plane position="0 2 1.5"
            width="4"
            height="1.5"
            color="#FFFFFF">
   </a-plane>
-  
-  <a-text value="Explore each wall.\nClick constructs.\nPrepare to complete the alignment challenge."
+
+  <a-text value="Explore each wall. Click constructs. Then complete the alignment challenge."
           position="0 2 1.6"
           align="center"
           color="#000"
           width="3.5">
   </a-text>
 
-<!-- Alignment Challenge Title -->
-<a-text value="Alignment Challenge"
-        position="0 3.5 5.9"
-        rotation="0 180 0"
-        align="center"
-        color="#000"
-        width="6">
-</a-text>
+  <!-- Alignment Challenge Title -->
+  <a-text value="Alignment Challenge"
+          position="0 3.5 5.9"
+          rotation="0 180 0"
+          align="center"
+          color="#000"
+          width="6">
+  </a-text>
 
-<!-- Research Purpose Prompt -->
-<a-plane position="0 2.8 5.8"
-         rotation="0 180 0"
-         width="8"
-         height="1.2"
-         color="#FFFFFF">
-</a-plane>
+  <!-- Purpose -->
+  <a-plane position="0 2.8 5.8"
+           rotation="0 180 0"
+           width="8"
+           height="1.2"
+           color="#FFFFFF">
+  </a-plane>
 
-<a-text value="Purpose: To examine whether beliefs about usefulness and ease of use predict students' intention to adopt AI writing tools."
-        position="0 2.8 5.7"
-        rotation="0 180 0"
-        align="center"
-        color="#000"
-        width="7.5">
-</a-text>
+  <a-text value="Purpose: To examine whether beliefs about usefulness and ease of use predict students' intention to adopt AI writing tools."
+          position="0 2.8 5.7"
+          rotation="0 180 0"
+          align="center"
+          color="#000"
+          width="7.5">
+  </a-text>
 
-<!-- Option 1 -->
-<a-plane class="answer"
-         position="-3 1.8 5.8"
-         rotation="0 180 0"
-         width="3"
-         height="1"
-         color="#DDDDDD"
-         data-correct="true">
-</a-plane>
+  <!-- Answer Options -->
+  <a-plane class="answer"
+           position="-3 1.8 5.8"
+           rotation="0 180 0"
+           width="3"
+           height="1"
+           color="#DDDDDD"
+           data-correct="true">
+  </a-plane>
 
-<a-text value="Technology Acceptance Model"
-        position="-3 1.8 5.7"
-        rotation="0 180 0"
-        align="center"
-        color="#000"
-        width="4">
-</a-text>
+  <a-text value="Technology Acceptance Model"
+          position="-3 1.8 5.7"
+          rotation="0 180 0"
+          align="center"
+          color="#000"
+          width="4">
+  </a-text>
 
-<!-- Option 2 -->
-<a-plane class="answer"
-         position="0 1.8 5.8"
-         rotation="0 180 0"
-         width="3"
-         height="1"
-         color="#DDDDDD"
-         data-correct="false">
-</a-plane>
+  <a-plane class="answer"
+           position="0 1.8 5.8"
+           rotation="0 180 0"
+           width="3"
+           height="1"
+           color="#DDDDDD"
+           data-correct="false">
+  </a-plane>
 
-<a-text value="Self-Efficacy Theory"
-        position="0 1.8 5.7"
-        rotation="0 180 0"
-        align="center"
-        color="#000"
-        width="4">
-</a-text>
+  <a-text value="Self-Efficacy Theory"
+          position="0 1.8 5.7"
+          rotation="0 180 0"
+          align="center"
+          color="#000"
+          width="4">
+  </a-text>
 
-<!-- Option 3 -->
-<a-plane class="answer"
-         position="3 1.8 5.8"
-         rotation="0 180 0"
-         width="3"
-         height="1"
-         color="#DDDDDD"
-         data-correct="false">
-</a-plane>
+  <a-plane class="answer"
+           position="3 1.8 5.8"
+           rotation="0 180 0"
+           width="3"
+           height="1"
+           color="#DDDDDD"
+           data-correct="false">
+  </a-plane>
 
-<a-text value="Ecological Systems Theory"
-        position="3 1.8 5.7"
-        rotation="0 180 0"
-        align="center"
-        color="#000"
-        width="4">
-</a-text>
+  <a-text value="Ecological Systems Theory"
+          position="3 1.8 5.7"
+          rotation="0 180 0"
+          align="center"
+          color="#000"
+          width="4">
+  </a-text>
 
-  
 </a-scene>
 
 <script src="js/main.js"></script>
